@@ -38,7 +38,7 @@ namespace PizzeriaOnline.Controllers
         }
 
 
-        [HttpPost("{k:Klient}")]
+        [HttpPost]
         public IActionResult ZapisKlienta(Klient k)
         {
             _con.Klient.Add(k);

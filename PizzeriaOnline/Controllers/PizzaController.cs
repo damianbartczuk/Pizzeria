@@ -40,7 +40,12 @@ namespace PizzeriaOnline.Controllers
         }
 
 
-
-
+        [HttpPost]
+        public IActionResult ZapiszPizze(Pizza pizza)
+        {
+            _con.Add(pizza);
+            _con.SaveChanges();
+            return StatusCode(201, pizza);
+        }
     }
 }
