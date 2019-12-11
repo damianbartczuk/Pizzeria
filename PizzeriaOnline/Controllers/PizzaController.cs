@@ -47,5 +47,14 @@ namespace PizzeriaOnline.Controllers
             _con.SaveChanges();
             return StatusCode(201, pizza);
         }
+
+
+        [HttpDelete]
+        public IActionResult UsunPizze(int id)
+        {
+            Pizza PizzaDoUsuniecia = (Pizza)_con.Pizza.Where(x => x.IdPizza == id);
+            _con.Remove(PizzaDoUsuniecia);
+            return StatusCode(204, PizzaDoUsuniecia);
+        }
     }
 }
