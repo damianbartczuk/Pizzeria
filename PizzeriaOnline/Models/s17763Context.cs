@@ -100,7 +100,7 @@ namespace PizzeriaOnline.Models
                 entity.HasKey(e => e.IdPizza)
                     .HasName("I");
 
-                entity.Property(e => e.IdPizza).ValueGeneratedNever();
+                entity.Property(e => e.IdPizza).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Cena).HasColumnType("numeric(4, 2)");
 
