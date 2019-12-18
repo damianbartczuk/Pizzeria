@@ -19,6 +19,12 @@ namespace PizzeriaOnline.Controllers
             _con = con;
         }
 
+        /// <summary>
+        /// metoda jest endpointem do pobrania kierowników
+        /// </summary>
+        /// <returns>
+        /// Meoda zwaca istniejących kierowniów
+        /// </returns>
         [HttpGet]
         public IActionResult PobierzKierownikow()
         {
