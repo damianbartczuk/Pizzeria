@@ -31,7 +31,11 @@ namespace PizzeriaOnline.Controllers
             return Ok(_con.Kierownik.ToList());
         }
 
-
+        /// <summary>
+        /// metoda jest endpointem do pobrania kierownika o zdefiniowanym id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id:int}")]
         public IActionResult PobierzKierownikaById(int id)
         {

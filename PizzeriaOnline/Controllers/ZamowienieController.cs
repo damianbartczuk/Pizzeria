@@ -18,13 +18,21 @@ namespace PizzeriaOnline.Controllers
             _con = con;
         }
 
+        /// <summary>
+        /// metoda pobierajaca wszystkie zamowienia
+        /// </summary>
+        /// <returns> lista zamowien </returns>
         [HttpGet]
         public IActionResult PobierzZamowienia()
         {
             return Ok(_con.Zamowienie.ToList());
         }
 
-
+        /// <summary>
+        /// metoda pobierajaca zamowienie o konkretnym id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id:int}")]
         public IActionResult PobierzZamowienieById(int id)
         {

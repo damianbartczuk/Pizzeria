@@ -20,13 +20,21 @@ namespace PizzeriaOnline.Controllers
             _con = con;
         }
 
+        /// <summary>
+        /// metoda poierająca wszystkie pizze
+        /// </summary>
+        /// <returns> lista pizz </returns>
         [HttpGet]
         public IActionResult PobierzPizze()
         {
             return Ok(_con.Pizza.ToList());
         }
 
-
+        /// <summary>
+        /// meoda pobierajaca pizze z konkretnym id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id:int}")]
         public IActionResult PobierzPizeById(int id)
         {
@@ -40,6 +48,11 @@ namespace PizzeriaOnline.Controllers
         }
 
 
+        /// <summary>
+        /// metoda zapisujaca pizze
+        /// </summary>
+        /// <param name="pizza"></param>
+        /// <returns> zapisana pizza </returns>
         [HttpPost]
         public IActionResult ZapiszPizze(Pizza pizza)
         {
@@ -48,7 +61,11 @@ namespace PizzeriaOnline.Controllers
             return StatusCode(201, pizza);
         }
 
-
+        /// <summary>
+        /// metoda usuwajaca pizze o konkretnym id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns> usunieta pizza </returns>
         [HttpDelete]
         public IActionResult UsunPizze(int id)
         {

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PizzeriaOnline</name>
+    </assembly>
+    <members>
+        <member name="M:PizzeriaOnline.Controllers.KierownikController.PobierzKierownikow">
+            <summary>
+            metoda jest endpointem do pobrania kierowników
+            </summary>
+            <returns>
+            Meoda zwaca istniejących kierowniów
+            </returns>
+        </member>
+    </members>
+</doc>

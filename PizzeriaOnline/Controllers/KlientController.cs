@@ -18,6 +18,12 @@ namespace PizzeriaOnline.Controllers
             _con = con;
         }
 
+        /// <summary>
+        /// metoda do pobrania klientów
+        /// </summary>
+        /// <returns>
+        /// liste klientow
+        /// </returns>
         [HttpGet]
         public IActionResult PobierzKlientowo()
         {
@@ -25,6 +31,11 @@ namespace PizzeriaOnline.Controllers
         }
 
 
+        /// <summary>
+        /// metoda pobierajaca konkretnego klienta 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id:int}")]
         public IActionResult PobierzKlientowoById(int id)
         {
@@ -37,6 +48,13 @@ namespace PizzeriaOnline.Controllers
             return Ok(pobranyKlient);
         }
 
+        /// <summary>
+        /// metoda do zapisania klienta
+        /// </summary>
+        /// <param name="k"></param>
+        /// <returns>
+        /// zapisany klint
+        /// </returns>
 
         [HttpPost]
         public IActionResult ZapisKlienta(Klient k)
